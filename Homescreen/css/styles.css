@@ -624,6 +624,10 @@ a{
     font-size: 40px;
     font-family: helvetica,kantumruy pro,Sans-serif;
 }
+.dropdown-menu.show {
+    display: flex;
+    /* Keep the dropdown visible when 'show' class is added */
+}
       
 .dropdown-menu .dropdown-info h3 {
     margin: 10px 0 5px;

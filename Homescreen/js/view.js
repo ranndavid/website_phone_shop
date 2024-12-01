@@ -37,3 +37,30 @@ dots.forEach((li, key) => {
 window.onresize = function(event) {
     reloadSlider();
 };
+
+const dropdowns = document.querySelectorAll(".menu-item.dropdown");
+dropdowns.forEach((dropdown) => {
+    const dropdownMenu = dropdown.querySelector(".dropdown-menu");
+    let hideTimeout;
+
+    dropdown.addEventListener("mouseenter", () => {
+        clearTimeout(hideTimeout);
+        dropdownMenu.classList.add("show");
+    });
+
+    dropdown.addEventListener("mouseleave", () => {
+        hideTimeout = setTimeout(() => {
+            dropdownMenu.classList.remove("show");
+        }, 100);
+    });
+
+    dropdownMenu.addEventListener("mouseenter", () => {
+        clearTimeout(hideTimeout);
+    });
+
+    dropdownMenu.addEventListener("mouseleave", () => {
+        hideTimeout = setTimeout(() => {
+            dropdownMenu.classList.remove("show");
+        }, 500);
+    });
+});
