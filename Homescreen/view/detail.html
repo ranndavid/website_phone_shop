@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- log on website  -->
+    <link rel="shortcut icon" href="../images/log_shop.png" type="image/x-icon" />  
+    <link rel="stylesheet" href="" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="/G:/coding/wensite/favicon.ico" type="image/x-icon" />
+    <title>Detail Phone</title>
+  </head>
+  <body>
+    <a href="apple.html">Go to back to page befor!</a>
+    <section id="prodetails" class="section-p1">
+      <div class="single-pro-image">
+        <img src="image/iPhone 12 Pro max.png" width="100%" id="MainImg" alt="" />
+        <div class="small-img-group">
+          <div class="small-img-clo">
+            <img
+              src="image/iPhone_13.png"
+              width="100%"
+              class="small-img"
+              alt=""
+            />
+          </div>
+          <div class="small-img-clo">
+            <img
+              src="image/Iphone 14.png"
+              width="100%"
+              class="small-img"
+              alt=""
+            />
+          </div>
+          <div class="small-img-clo">
+            <img
+              src="image/iphone 15.png"
+              width="100%"
+              class="small-img"
+              alt=""
+            />
+          </div>
+          <div class="small-img-clo">
+            <img
+              src="image/iphone16 pro.png"
+              width="100%"
+              class="small-img"
+              alt=""
+            />
+          </div>
+          <div class="small-img-clo">
+            <img
+              src="image/iphone16 plus.png"
+              width="100%"
+              class="small-img"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <div class="single-pro-details">
+        <p class="detal1"> <strong>iPhone 12 Pro max</strong></p>
+        <h2>$649</h2>
+        <a href="tel:093535666"><img src="image/Telegram_logo.svg.webp" alt="Telegram_logo" width="17px" > Chat with us now (093 535 666)</a><br />
+        <a href="https://www.remove.bg/upload"> <img src="image/messenger-facebook.png.png" alt="chatFB" width="20px" > Chat now via Messenger</a><br />
+        <a href="tel:010535666"> <img src="image/call phone.png.png" alt="Call phone.png" width="18px"> Call now (010 535 666)</a>
+        <br>
+        <br>
+        <select>
+          <option>Select Ram</option>
+          <option>64GB</option>
+          <option>128GB</option>
+          <option>256GB</option>
+        </select>
+        <input id="quantity" type="number" value="1" min="1" step="1" oninput="validateInput()" />
+       <button class="normal" onclick="addToCart()">Add To Cart</button>
+        <h4>Product Details</h4>
+        <style>
+          body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+          }
+          .letter {
+            border: 1px none;
+            padding: 20px;
+            max-width: 600px;
+            background-color: #f9f9f9;
+            cursor: pointer;
+            transition: background-color 0.3s;
+          }
+
+          
+        </style>
+        </head>
+        <div class="letter" onclick="changeColor()">
+          <span
+          >Technology	GSM / CDMA / HSPA / EVDO / LTE / 5G</span
+        ><hr>
+          2G bands	GSM 850 / 900 / 1800 / 1900 – SIM 1 & SIM 2 (dual-SIM)
+          CDMA 800 / 1900<hr>
+          5G bands	1, 2, 3, 5, 7, 8, 12, 20, 25, 26, 28, 30, 38, 40, 41, 48, 66, 70, 77, 78, 79 SA/NSA/Sub6 – A2886, A2888
+        </div>
+        <p class="p-back"> <strong>Launch</strong></p>
+        <div class="letter" onclick="changeColor()">
+          <span
+          >Dimensions	160.8 x 78.1 x 7.8 mm (6.33 x 3.07 x 0.31 in)</span
+        ><hr>
+        Weight	203 g (7.16 oz)<hr>
+        Build	Glass front (Gorilla Glass), glass back (Gorilla Glass), aluminum frame
+        </div>
+        <script>
+          function changeColor() {
+            const letter = document.querySelector(".letter");
+            const randomColor =
+              "#" + Math.floor(Math.random() * 16777215).toString(16);
+            letter.style.backgroundColor = randomColor;
+          }
+        </script>
+      </div>
+    </section>
+    <script>
+      var MainImg = document.getElementById("MainImg");
+      var smallimg = document.getElementsByClassName("small-img");
+      smallimg[0].onclick = function () {
+        MainImg.src = smallimg[0].src;
+      };
+      smallimg[1].onclick = function () {
+        MainImg.src = smallimg[1].src;
+      };
+      smallimg[2].onclick = function () {
+        MainImg.src = smallimg[2].src;
+      };
+      smallimg[3].onclick = function () {
+        MainImg.src = smallimg[3].src;
+      };
+      smallimg[4].onclick = function () {
+        MainImg.src = smallimg[4].src;
+      };
+
+
+      // number input
+        function validateInput() {
+          const input = document.getElementById("quantity");
+          // Ensure the value is a positive integer
+          if (input.value < 1) {
+            input.value = 1;
+          }
+        }
+        
+        function addToCart() {
+          const quantity = parseInt(document.getElementById("quantity").value, 10);
+        
+          if (Number.isInteger(quantity) && quantity > 0) {
+            console.log(`Adding ${quantity} item(s) to cart.`);
+            // Your logic for adding to the cart
+          } else {
+            alert("Please enter a valid positive integer.");
+          }
+        }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Effect</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="menu">
+        <div class="menu-item">Tablet
+            <div class="dropdown">
+                <div class="dropdown-header">
+                    <h2>iPad/Tablet</h2>
+                    <p>Shop for a variety of tablets for taking notes, reading, or streaming content. <br>
+                        Or want to check out <span class="highlight">used tablet?</span>
+                    </p>
+                </div>
+                <ul>
+                    <li>iPad</li>
+                    <li>Galaxy Tab</li>
+                    <li>Google Tablet</li>
+                    <li>Huawei Tablet</li>
+                    <li>Xiaomi Tablet</li>
+                    <li>Oppo Tablet</li>
+                    <li>Nokia Tablet</li>
+                </ul>
+                <a href="#" class="all-tablets">All iPad/Tablets</a>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+<style>
+  /* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.menu {
+  background-color: #ff9800;
+  padding: 10px 20px;
+}
+
+.menu-item {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #290626;
+  color: white;
+  width: 300px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: none;
+  border-radius: 4px;
+}
+
+.dropdown-header h2 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: #ff5599;
+}
+
+.dropdown-header p {
+  font-size: 14px;
+}
+
+.highlight {
+  color: orange;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+ul li {
+  margin: 5px 0;
+}
+
+.all-tablets {
+  color: orange;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.menu-item:hover .dropdown {
+  display: block;
+}
+
+</style>
+<script>
+  const menuItem = document.querySelector('.menu-item');
+const dropdown = document.querySelector('.dropdown');
+
+// Show dropdown on mouseenter
+menuItem.addEventListener('mouseenter', () => {
+    dropdown.style.display = 'block';
+});
+
+// Hide dropdown on mouseleave
+menuItem.addEventListener('mouseleave', () => {
+    dropdown.style.display = 'none';
+});
+
+</script>
+</html>

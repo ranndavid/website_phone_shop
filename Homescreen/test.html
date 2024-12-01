@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motorbike Sticker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="sticker-container">
+    <img src="images/motorbike-logo.png" alt="motorbike-logo" class="motorbike-logo">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        overflow: hidden;
+        background-color: #f0f0f0;
+    }
+    
+    .sticker-container {
+        position: relative;
+        width: 100px;
+        height: 100px;
+    }
+    
+    .motorbike-logo {
+        width: 100%;
+        height: auto;
+        animation: moveMotorbike 5s linear infinite;
+    }
+    
+    @keyframes moveMotorbike {
+        0% { transform: translateX(-100%); }
+        50% { transform: translateX(50%); }
+        100% { transform: translateX(100%); }
+    }
+    
+</style>
